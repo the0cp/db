@@ -12,6 +12,7 @@ map<string, OptionHandler> optionMap = {
     {"", [](const string&){}},
     {"exit", [](const string&){exit(0);}},
     {"clear", [](const string&){system(TERM_CLEAR);}},
+    {"help", [](const string&){printOption();}},
     {"new", [](const string& arg){newDb(arg);}},
     {"list", [](const string& arg){listDb();}},
     {"use", [](const string& arg){openDb(arg);}},
